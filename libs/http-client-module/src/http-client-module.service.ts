@@ -1,6 +1,6 @@
 // Package.
 import { Inject } from '@nestjs/common';
-import axios from 'axios';
+// import axios from 'axios';
 
 // Internal.
 import { HTTP_CLIENT_MODULE_OPTIONS } from './const';
@@ -18,15 +18,16 @@ export class HttpClientModuleService {
     this.apiKey = this.options.apiKey;
   }
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   public async fetchData(method: string, payload?: any) {
-    return axios({
-      method,
-      url: `${this.apiUrl}/health`,
-      data: payload,
-      headers: {
-        'Content-Type': 'application/json',
-        Authorization: `Bearer ${this.apiKey}`,
-      },
-    });
+    // return axios({
+    //   method,
+    //   url: `${this.apiUrl}/health`,
+    //   data: payload,
+    //   headers: {
+    //     'Content-Type': 'application/json',
+    //     Authorization: `Bearer ${this.apiKey}`,
+    //   },
+    // });
   }
 }
